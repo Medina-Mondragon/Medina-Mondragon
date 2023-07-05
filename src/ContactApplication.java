@@ -59,7 +59,7 @@ public class ContactApplication {
     }
 
     private static void addContact(Scanner scanner) {
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter the contact's name: ");
         String name = scanner.nextLine();
         System.out.print("Enter the contact's phone number: ");
@@ -69,12 +69,12 @@ public class ContactApplication {
     }
 
     private static void searchContact(Scanner scanner) {
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter the name of the contact to search: ");
         String name = scanner.nextLine();
         Contact contact = contactManager.searchContact(name);
         if (contact != null) {
-            System.out.println("Contact found:");
+            System.out.println("Contact found: ");
             System.out.println(contact.getName() + " | " + contact.getPhoneNumber());
         } else {
             System.out.println("Contact not found.");
@@ -82,7 +82,7 @@ public class ContactApplication {
     }
 
     private static void deleteContact(Scanner scanner) {
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter the name of the contact to delete: ");
         String name = scanner.nextLine();
         Contact contact = contactManager.searchContact(name);
