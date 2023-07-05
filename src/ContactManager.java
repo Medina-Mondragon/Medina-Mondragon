@@ -144,7 +144,7 @@ public class ContactManager {
 		boolean found = false;
 		for (Contact contact : contacts){
 			if (contact.getName().equalsIgnoreCase(name)){
-				System.out.println("Contact found:"
+				System.out.println("Contact found: "
 						+ contact.getName() + " | "
 						+ contact.getPhoneNumber());
 				found = true;
