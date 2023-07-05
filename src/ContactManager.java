@@ -3,9 +3,11 @@ import java.util.*;
 
 public class ContactManager {
 	private List<Contact> contacts;
+	private Scanner scanner;
 
 	public ContactManager() {
 		contacts = new ArrayList<>();
+		scanner = new Scanner(System.in);
 		loadContactsFromFile();
 	}
 
@@ -84,7 +86,6 @@ public class ContactManager {
 	}
 
 	public void showMainMenu() {
-		Scanner scanner = new Scanner(System.in);
 		int choice;
 
 		do {
@@ -97,7 +98,7 @@ public class ContactManager {
 			System.out.print("Enter an option (1, 2, 3, 4, or 5): ");
 
 			choice = scanner.nextInt();
-			scanner.nextLine(); // Consume the newline character
+			scanner.nextLine();
 
 			switch (choice) {
 				case 1:
@@ -120,12 +121,9 @@ public class ContactManager {
 					break;
 			}
 		} while (choice != 5);
-
-		scanner.close();
 	}
 
 	public void searchContact(){
-		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Enter the name of the contact to search: ");
 		String name = scanner.nextLine();
@@ -148,7 +146,6 @@ public class ContactManager {
 
 
 	public void addContact(){
-		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Enter the name of the contact: ");
 		String name = scanner.nextLine();
@@ -164,8 +161,7 @@ public class ContactManager {
 		System.out.println("Contact added successfully.");
 	}
 
-	public void deleteContact() {
-		Scanner scanner = new Scanner(System.in);
+	public void deleteContact(){
 
 		System.out.print("Enter the name of the contact to delete: ");
 		String name = scanner.nextLine();
@@ -176,6 +172,4 @@ public class ContactManager {
 
 		System.out.println("Contact deleted successfully.");
 	}
-
-
 }

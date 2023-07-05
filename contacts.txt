@@ -1,6 +1,3 @@
-John Doer | 123-453-2345
-Bob Baste | 132-034-5432
-Dan Raste | 555-423-2444
-Bobby | 123-123-1234
-Raphael | 312-433-5432
-Ashley | 800-899-1212
+John Doer|123-453-2345
+Bob Baste|132-034-5432
+Dan Raste|555-423-2444
