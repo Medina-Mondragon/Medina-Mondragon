@@ -136,17 +136,24 @@ public class ContactManager {
 	}
 
 
-	public void searchContact(){
-
+	public void searchContact() {
 		System.out.print("Enter the name of the contact to search: ");
 		String name = scanner.nextLine();
 
 		boolean found = false;
-		for (Contact contact : contacts){
-			if (contact.getName().equalsIgnoreCase(name)){
-				System.out.println("Contact found: "
-						+ contact.getName() + " | "
-						+ contact.getPhoneNumber());
+		for (Contact contact : contacts) {
+			if (contact.getName().equalsIgnoreCase(name)) {
+				System.out.println("Contact found: " + contact.getName() + " | " + contact.getPhoneNumber());
+
+				int maxLength = Math.max(contact.getName().length(), contact.getPhoneNumber().length());
+
+				String line = "+----------------------------+\n" +
+						String.format("| Name: %-" + (maxLength + 10) + "s |\n", contact.getName()) +
+						String.format("| Number: %-" + (maxLength + 8) + "s |\n", contact.getPhoneNumber()) +
+						"+----------------------------+";
+
+				System.out.println(line);
+
 				found = true;
 				break;
 			}
@@ -156,6 +163,7 @@ public class ContactManager {
 			System.out.println("Sorry, the name you entered was not found.");
 		}
 	}
+
 
 
 	public void addContact(){
