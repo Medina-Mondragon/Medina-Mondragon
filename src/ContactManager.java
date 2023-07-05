@@ -89,13 +89,19 @@ public class ContactManager {
 		int choice;
 
 		do {
-			System.out.println("\nMain Menu");
-			System.out.println("1. View contacts");
-			System.out.println("2. Add a new contact");
-			System.out.println("3. Search a contact by name");
-			System.out.println("4. Delete an existing contact");
-			System.out.println("5. Exit");
-			System.out.print("Enter an option (1, 2, 3, 4, or 5): ");
+			System.out.println("\n+-----------------------------------------------+\n" +
+					"|                   Main Menu                   |\n" +
+					"+-----------------------------------------------+\n" +
+					"|                                               |\n" +
+					"| 1. View contacts                              |\n" +
+					"| 2. Add a new contact                          |\n" +
+					"| 3. Search a contact by name                   |\n" +
+					"| 4. Delete an existing contact                 |\n" +
+					"| 5. Exit                                       |\n" +
+					"|                                               |\n" +
+					"+-----------------------------------------------+");
+			System.out.print("Enter an option (1, 2, 3, 4, or 5): \n");
+
 
 			choice = scanner.nextInt();
 			scanner.nextLine();
@@ -114,7 +120,13 @@ public class ContactManager {
 					deleteContact();
 					break;
 				case 5:
-					System.out.println("Exiting the contact manager. Goodbye!");
+					System.out.println("\n+-----------------------------------------------+\n" +
+							"|  oooo  oooo  oooo  ooo   oooo  oo  oo  oooo   |\n" +
+							"|  o  o  o  o  o  o  o  o  o  o   o  o   o      |\n" +
+							"|  oooo  o  o  o  o  o  o  oo      o     ooo    |\n" +
+							"|     o  o  o  o  o  o  o  o  o    o     o      |\n" +
+							"|  oooo  oooo  oooo  ooo   oooo    o     oooo   |\n" +
+							"+-----------------------------------------------+\n" );
 					break;
 				default:
 					System.out.println("Invalid choice. Please enter a valid option.");
@@ -122,6 +134,7 @@ public class ContactManager {
 			}
 		} while (choice != 5);
 	}
+
 
 	public void searchContact(){
 
