@@ -53,15 +53,6 @@ public class ContactManager {
 		}
 	}
 
-	public Contact searchContact(String name) {
-		for (Contact contact : contacts) {
-			if (contact.getName().equalsIgnoreCase(name)) {
-				return contact;
-			}
-		}
-		return null;
-	}
-
 	public void saveContactsToFile() {
 		try {
 			FileWriter writer = new FileWriter("contacts.txt");
