@@ -53,11 +53,6 @@ public class ContactManager {
 		}
 	}
 
-	public void addContact(String name, String phoneNumber) {
-		Contact contact = new Contact(name, phoneNumber);
-		contacts.add(contact);
-	}
-
 	public Contact searchContact(String name) {
 		for (Contact contact : contacts) {
 			if (contact.getName().equalsIgnoreCase(name)) {
@@ -65,10 +60,6 @@ public class ContactManager {
 			}
 		}
 		return null;
-	}
-
-	public void deleteContact(Contact contact) {
-		contacts.remove(contact);
 	}
 
 	public void saveContactsToFile() {
@@ -134,8 +125,6 @@ public class ContactManager {
 			}
 		} while (choice != 5);
 	}
-
-
 	public void searchContact() {
 		System.out.print("Enter the name of the contact to search: ");
 		String name = scanner.nextLine();
@@ -163,8 +152,6 @@ public class ContactManager {
 			System.out.println("Sorry, the name you entered was not found.");
 		}
 	}
-
-
 
 	public void addContact(){
 
